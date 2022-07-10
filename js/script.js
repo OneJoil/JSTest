@@ -1,16 +1,19 @@
-// ШПАРГАЛКА 
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// '++' - увеличение на 1
-// '--' - уменьшение на 1
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let inscr = 10,
-    descr = 10;
+const whatsMovie = prompt('Один из последних просмотренных фильмов?', ''),
+      rateMovie = prompt('На сколько оцените его?', ''),
+      whatsMovie1 = prompt('Один из последних просмотренных фильмов?', ''),
+      rateMovie1= prompt('На сколько оцените его?', '');
 
-++inscr;
---descr;
+personalMovieDB.movies[whatsMovie] = rateMovie;
+personalMovieDB.movies[whatsMovie1] = rateMovie1;
 
-console.log(inscr);
-console.log(descr);
-
-// && - И
-// || - ИЛИ
+console.log(personalMovieDB);
